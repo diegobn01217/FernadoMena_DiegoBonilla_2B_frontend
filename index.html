@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clientes</title>
+    <title>Eventos</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 <body class="d-flex flex-column min-vh.100">
@@ -11,7 +11,7 @@
     <header class="bg-white border-bottom border-success border-4 shadow-sm">
         <div class="container-fluid px-4 py-3 d-flex justify-content-between align-items-center">
             <div>
-                <h1 class="h4 mb-9 text-success fw-bold">Clientes</h1>
+                <h1 class="h4 mb-9 text-success fw-bold">Eventos</h1>
                 <small class="text-muted">Gestión de ventas</small>
             </div>
             <span class="badge text-bg-success">Ventas</span>
@@ -23,8 +23,8 @@
             <nav class="col-12 col-md-13 col-lg-2 bg-dark p-3">
                 <p class="text-secondary text-uppercase small-mb-2">Menú</p>
                 <ul class="nav nav-pills flex-row flex-md-column gap-1">
-                    <li class="nav-item"><a class="nav-link text-white" href="index.html">Clientes</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="./html/eventos.html">Eventos</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="./html/clientes.html">Clientes</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="index.html">Eventos</a></li>
                 </ul>
             </nav>
 
@@ -33,27 +33,27 @@
 
                 <div class="card shadow-sm mb-4 border-start border-success border-4">
                     <div class="card-body">
-                        <h2 class="h5 text-success mb-3" id="tituloForm">Registrar Clientes</h2>
-                        <form action="formClientes" novalidate>
+                        <h2 class="h5 text-success mb-3" id="tituloForm">Registrar Eventos</h2>
+                        <form action="formEventos" novalidate>
                             <div class="col-12 col-md-6">
-                                <label for="txtNombre" class="form-label">Nombre</label>
-                                <input type="text" name="form-control" id="txtNombre" placeholder="Ej: Mena">
+                                <label for="txtNombreEvento" class="form-label">Nombre</label>
+                                <input type="text" name="form-control" id="txtNombreEvento">
                             </div>
                             <div class="col-6 col-md-3">
-                                <label for="txtApellido" class="form-label">Apellido</label>
-                                <input type="text" name="form-control" id="txtApellido">
+                                <label for="txtFechaEvento" class="form-label">Fecha</label>
+                                <input type="date" name="form-control" id="txtFechaEvento">
                             </div>
                             <div class="col-6 col-md-3">
-                                <label for="txtTelefono" class="form-label">Telefono</label>
-                                <input type="text" name="form-control" id="txtTelefono">
+                                <label for="txtCantidadPersonas" class="form-label">Cantidad de personas</label>
+                                <input type="number" name="form-control" id="txtTelefono" step="1">
                             </div>
                             <div class="col-6 col-md-3">
-                                <label for="txtEmail" class="form-label">Email</label>
-                                <input type="text" name="form-control" id="txtEmail">
+                                <label for="txtCantidadHoras" class="form-label">Cantidad de horas</label>
+                                <input type="number" name="form-control" id="txtCantidadHoras" step="1">
                             </div>
                             <div class="col-6 col-md-3">
-                                <label for="txtDireccion" class="form-label">Dirección</label>
-                                <input type="text" name="form-control" id="txtDireccion">
+                                <label for="txtEstado" class="form-label">Estado</label>
+                                <input type="text" name="form-control" id="txtEstado">
                             </div>
                             <div class="mt-4 d-flex gap-2">
                                 <button type="submit" id="btnGuardar" class="btn btn-success">Guardar</button>
@@ -65,15 +65,15 @@
     
                 <div class="card shadow-sm">
                     <div class="card-body">
-                        <h2 class="h5 text-success mb-3">Listado de clientes</h2>
+                        <h2 class="h5 text-success mb-3">Listado de eventos</h2>
                         <div class="table-responsive">
                             <table class="table table-hover align-middle mb-0">
                                 <thead class="table-success">
                                     <tr>
-                                        <th>#</th><th>Nombre</th><th>Apellido</th><th>Telefono</th><th>Email</th><th>Dirección</th><th class="text-end">Acciones</th>
+                                        <th>#</th><th>Nombre</th><th>Fecha</th><th>Personas</th><th>Horas</th><th>Estado</th><th class="text-end">Acciones</th>
                                     </tr>
                                 </thead>
-                                <tbody id="tablaClientes"></tbody>
+                                <tbody id="tablaEventos"></tbody>
                             </table>
                         </div>
                     </div>
