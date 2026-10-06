@@ -48,7 +48,7 @@ const validarFormulario = () => {
 };
 
 const pintarCategorias = () => {
-    const opciones = estado.cliente.map(c => new option (c.cli_nombre, c.id_cliente)); // <- Revisar bien estos nombres, poner los de evento
+    const opciones = estado.cliente.map(c => new option (c.cli_nombre, c.id_cliente)); // <- Revisar bien estos nombres
     el.cliente.replaceChildren(new option ("--Seleccione--",""), ...opciones);
 };
 
