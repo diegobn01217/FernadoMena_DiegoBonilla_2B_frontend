@@ -1,5 +1,5 @@
-import{obtenerClientes, insertarCliente, modificarCliente, borrarCliente} from "../service/clienteService.js";
-import{borrarEvento, obtenerEventos} from "../service/eventoService.js"
+import{obtenerEventos, insertarEvento, modificarEvento, borrarEvento} from "../service/eventoService.js";
+import{borrarCliente, obtenerClientes} from "../service/clienteService.js"
 
 const el = {
     form : document.getElementById("formEventos"),
@@ -48,7 +48,7 @@ const validarFormulario = () => {
 };
 
 const pintarCategorias = () => {
-    const opciones = estado.cliente.map(c => new option (c.cli_nombre, c.id_cliente)); // <- Revisar bien estos nombres, poner los de evento
+    const opciones = estado.cliente.map(c => new option (c.cli_nombre, c.id_cliente));
     el.cliente.replaceChildren(new option ("--Seleccione--",""), ...opciones);
 };
 
